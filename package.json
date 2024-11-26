@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/Mehrdad-Dehghanzadeh/web-view-bridge#readme",
   "devDependencies": {
+    "prettier": "3.4.1",
     "ts-loader": "^9.5.1",
     "typescript": "^5.7.2",
     "webpack": "^5.96.1",
