@@ -16,9 +16,9 @@
     "url": "https://github.com/Mehrdad-Dehghanzadeh/web-view-bridge/issues"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": "prettier --write --ignore-unknown",
+    "*.{js,css,md,html,ts}": "prettier --write"
   },
- 
   "homepage": "https://github.com/Mehrdad-Dehghanzadeh/web-view-bridge#readme",
   "devDependencies": {
     "husky": "^9.1.7",
