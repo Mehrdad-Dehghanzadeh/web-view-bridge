@@ -1,26 +1,35 @@
 {
   "name": "web-view-bridge",
   "version": "0.0.0",
+  "private": false,
   "description": "",
-  "scripts": {
-    "build": "webpack --mode=production",
-    "prepare": "husky"
+  "author": {
+    "name": "Mehrdad Dehghanzadeh",
+    "email": "mehrdad.dehghanzadeh.dev@gmail.com"
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mehrdad-Dehghanzadeh/web-view-bridge.git"
   },
-  "author": "Mehrdad Dehghanzadeh",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Mehrdad-Dehghanzadeh/web-view-bridge/issues"
+  },
+  "engines": {
+    "node": ">=18.19.0",
+    "npm": ">=9.0.0"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown",
     "*.{js,css,md,html,ts}": "prettier --write"
   },
   "homepage": "https://github.com/Mehrdad-Dehghanzadeh/web-view-bridge#readme",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "prepare": "husky"
+  },
   "devDependencies": {
+    "@babel/preset-env": "^7.26.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "prettier": "3.4.1",
@@ -28,5 +37,12 @@
     "typescript": "^5.7.2",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4"
-  }
+  },
+  "browserslist": [
+    "iOS >= 12.3",
+    "Chrome >=80",
+    "ChromeAndroid >=80",
+    "Firefox >=80",
+    "Edge >=80"
+  ]
 }
