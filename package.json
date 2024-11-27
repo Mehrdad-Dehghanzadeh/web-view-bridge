@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "prepare": "husky || true"
   },
   "repository": {
     "type": "git",
@@ -14,8 +15,14 @@
   "bugs": {
     "url": "https://github.com/Mehrdad-Dehghanzadeh/web-view-bridge/issues"
   },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+ 
   "homepage": "https://github.com/Mehrdad-Dehghanzadeh/web-view-bridge#readme",
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
     "prettier": "3.4.1",
     "ts-loader": "^9.5.1",
     "typescript": "^5.7.2",

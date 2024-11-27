@@ -1,4 +1,3 @@
-
 const path = require("path");
 
 const srcDir = path.resolve(__dirname, "src");
@@ -25,8 +24,8 @@ module.exports = {
       },
     ],
   },
-  
+
   resolve: {
-    extensions: [ ".ts", ".js"],
+    extensions: [".ts", ".js"],
   },
 };
