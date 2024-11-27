@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "webpack --mode=production",
-    "prepare": "husky || true"
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
