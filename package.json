@@ -26,17 +26,21 @@
   },
   "homepage": "https://github.com/Mehrdad-Dehghanzadeh/web-view-bridge#readme",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite src",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "analyze": "vite-bundle-visualizer",
+    "analyze:subburst": "vite-bundle-visualizer -t sunburst",
+    "analyze:network": "vite-bundle-visualizer -t network"
   },
   "devDependencies": {
     "husky": "^9.1.7",
     "lint-staged": "^15.4.1",
     "prettier": "3.4.1",
     "typescript": "^5.7.3",
-    "vite": "^6.0.11"
+    "vite": "^6.0.11",
+    "vite-bundle-visualizer": "^1.2.1"
   },
   "browserslist": [
     "iOS >= 12.3",
