@@ -18,7 +18,15 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    "paths": {
+      "@/*": ["./src/*"],
+      "@type/*": ["./src/types/*"],
+      "@methods/*": ["./src/methods/*"],
+      "@utils/*": ["./src/utils/*"]
+    }
   },
+
   "include": ["src", "src/types/global.d.ts"]
 }
