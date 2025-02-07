@@ -1,4 +1,6 @@
 type EmptyString = ''
+type EmptyObject = {}
+type SimpleFunction = () => void
 
 type NumberString = `${number}`
 

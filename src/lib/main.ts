@@ -5,12 +5,11 @@ function setup() {
   eventHandler.ready()
   //@ts-ignore
   window.bridge = { ...bridge }
+  bridge.iframLoaded()
 }
 
 setup()
 
 document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    bridge.setTitle('hello world')
-  }, 4000)
+  bridge.setTitle('hello world')
 })
