@@ -1,5 +1,16 @@
-import Bridge from './Bridge'
+import eventHandler from './eventHandler'
+import bridge from '../methods'
 
-const bridge = new Bridge()
+function setup() {
+  eventHandler.ready()
+  //@ts-ignore
+  window.bridge = { ...bridge }
+}
 
-console.log(bridge)
+setup()
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    bridge.setTitle('hello world')
+  }, 4000)
+})
