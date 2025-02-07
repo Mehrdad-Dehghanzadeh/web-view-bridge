@@ -19,7 +19,7 @@ class EventHandler implements IEventHandler {
   handleMessages() {
     window.addEventListener('message', (e: MessageEvent) => {
       try {
-        if (isJsonString(e.data)) {
+        if (isJsonString(e.data) && e.origin) {
           const { payload, name } = <MessageStringData>JSON.parse(e.data)
 
           this.subscribe(name, payload)
