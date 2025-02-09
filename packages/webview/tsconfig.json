@@ -24,7 +24,8 @@
       "@/*": ["./src/*"],
       "@type/*": ["./src/types/*"],
       "@methods/*": ["./src/methods/*"],
-      "@utils/*": ["./src/utils/*"]
+      "@utils/*": ["./src/utils/*"],
+      "@core/*": ["./src/core/*"]
     }
   },
 

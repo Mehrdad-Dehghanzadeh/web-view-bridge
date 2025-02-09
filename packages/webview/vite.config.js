@@ -15,7 +15,7 @@ export default defineConfig(() => {
       target: ['firefox78', 'chrome80', 'safari12.3'],
 
       lib: {
-        entry: resolve(__dirname, './src/lib/main.ts'),
+        entry: resolve(__dirname, 'src/core/main.ts'),
         name: 'webViewBridge',
         fileName: () => `webViewBridge.js`,
         formats: ['iife']

@@ -1,4 +1,4 @@
-import eventHandler from '../lib/eventHandler'
+import eventHandler from '../core/eventHandler'
 
 export const iframeLoaded: SimpleFunction = () => {
   document.addEventListener('DOMContentLoaded', () => {
