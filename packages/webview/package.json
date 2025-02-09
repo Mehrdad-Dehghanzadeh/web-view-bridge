@@ -1,0 +1,24 @@
+{
+  "name": "web-view-bridge",
+  "private": false,
+  "scripts": {
+    "dev": "vite src",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "analyze": "vite-bundle-visualizer",
+    "analyze:sunburst": "vite-bundle-visualizer -t sunburst",
+    "analyze:network": "vite-bundle-visualizer -t network"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
+    "vite-bundle-visualizer": "^1.2.1"
+  },
+  "browserslist": [
+    "iOS >= 12.3",
+    "Chrome >=80",
+    "ChromeAndroid >=80",
+    "Firefox >=80",
+    "Edge >=80"
+  ]
+}

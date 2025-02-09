@@ -2,7 +2,6 @@
   "name": "web-view-bridge",
   "version": "0.0.0",
   "private": false,
-  "type": "module",
   "description": "",
   "author": {
     "name": "Mehrdad Dehghanzadeh",
@@ -25,28 +24,23 @@
     "*.{js,css,md,html,ts}": "prettier --write"
   },
   "homepage": "https://github.com/Mehrdad-Dehghanzadeh/web-view-bridge#readme",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "vite src",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
     "prepare": "husky",
-    "analyze": "vite-bundle-visualizer",
-    "analyze:sunburst": "vite-bundle-visualizer -t sunburst",
-    "analyze:network": "vite-bundle-visualizer -t network"
+    "build": "npm run build -w=packages/webview",
+    "dev:platform": "npm run dev -w=packages/platform",
+    "dev:webview": "npm run dev -w=packages/webview",
+    "dev": "concurrently \"npm run dev:platform\"  \"npm run dev:webview\"",
+    "analyze": "npm run analyze -w=packages/webview",
+    "analyze:network": "npm run analyze:network -w=packages/webview",
+    "analyze:sunburst": "npm run analyze:sunburst -w=packages/webview"
   },
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
-    "prettier": "^3.4.2",
-    "typescript": "^5.7.3",
-    "vite": "^6.1.0",
-    "vite-bundle-visualizer": "^1.2.1"
-  },
-  "browserslist": [
-    "iOS >= 12.3",
-    "Chrome >=80",
-    "ChromeAndroid >=80",
-    "Firefox >=80",
-    "Edge >=80"
-  ]
+    "prettier": "^3.5.0"
+  }
 }

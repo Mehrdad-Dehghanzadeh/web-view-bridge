@@ -1,0 +1,31 @@
+/* Light Theme (default in :root) */
+:root {
+  --background-color: white;
+  --text-color: black;
+  --header-background: #f0f0f0;
+  --header-text-color: black;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  --background-color: #2e2e2e;
+  --text-color: white;
+  --header-background: #1f1f1f;
+  --header-text-color: white;
+}
+
+body.system-theme {
+  --background-color: white;
+  --text-color: black;
+  --header-background: #f0f0f0;
+  --header-text-color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.system-theme {
+    --background-color: #2e2e2e;
+    --text-color: white;
+    --header-background: #1f1f1f;
+    --header-text-color: white;
+  }
+}
