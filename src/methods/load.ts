@@ -1,7 +1,7 @@
 import eventHandler from '../lib/eventHandler'
 
-export const iframLoaded: SimpleFunction = () => {
+export const iframeLoaded: SimpleFunction = () => {
   document.addEventListener('DOMContentLoaded', () => {
-    eventHandler.dispatch('iframLoaded')
+    eventHandler.dispatch('iframeLoaded')
   })
 }

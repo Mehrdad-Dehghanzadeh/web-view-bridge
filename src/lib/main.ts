@@ -5,11 +5,7 @@ function setup() {
   eventHandler.ready()
   //@ts-ignore
   window.bridge = { ...bridge }
-  bridge.iframLoaded()
+  bridge.iframeLoaded()
 }
 
 setup()
-
-document.addEventListener('DOMContentLoaded', () => {
-  bridge.setTitle('hello world')
-})

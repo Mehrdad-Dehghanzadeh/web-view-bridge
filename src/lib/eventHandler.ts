@@ -7,24 +7,23 @@ class EventHandler implements IEventHandler {
   private targetOrigin: string = '*'
 
   subscribe(name: string, payload?: TData) {
-    const customEvent = new CustomEvent(name, {
-      detail: {
-        ...payload
-      }
-    })
+    if (name) {
+      const customEvent = new CustomEvent(name, {
+        detail: {
+          ...payload
+        }
+      })
 
-    dispatchEvent(customEvent)
+      dispatchEvent(customEvent)
+    }
   }
 
   handleMessages() {
     window.addEventListener('message', (e: MessageEvent) => {
       try {
-        if (isJsonString(e.data) && e.origin) {
+        if (e.data && isJsonString(e.data) && e.origin) {
           const { payload, name } = <MessageStringData>JSON.parse(e.data)
-
           this.subscribe(name, payload)
-        } else {
-          throw new Error('event data json string is not valid')
         }
       } catch (error) {
         console.log(error)

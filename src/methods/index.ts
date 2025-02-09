@@ -1,9 +1,9 @@
 import { setTitle } from './title'
-import { iframLoaded } from './load'
+import { iframeLoaded } from './load'
 
 const bridge = {
   setTitle,
-  iframLoaded
+  iframeLoaded
 }
 
 export default bridge
