@@ -32,7 +32,10 @@
     "build": "npm run build -w=packages/webview",
     "dev:platform": "npm run dev -w=packages/platform",
     "dev:webview": "npm run dev -w=packages/webview",
-    "dev": "concurrently \"npm run dev:platform\"  \"npm run dev:webview\""
+    "dev": "concurrently \"npm run dev:platform\"  \"npm run dev:webview\"",
+    "analyze": "npm run analyze -w=packages/webview",
+    "analyze:network": "npm run analyze:network -w=packages/webview",
+    "analyze:sunburst": "npm run analyze:sunburst -w=packages/webview"
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
