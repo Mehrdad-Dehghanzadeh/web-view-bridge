@@ -17,7 +17,6 @@ export default defineConfig(() => {
       lib: {
         entry: resolve(__dirname, './src/lib/main.ts'),
         name: 'webViewBridge',
-        // the proper extensions will be added
         fileName: () => `webViewBridge.js`,
         formats: ['iife']
       },
