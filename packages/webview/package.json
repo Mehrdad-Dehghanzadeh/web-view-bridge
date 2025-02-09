@@ -1,8 +1,6 @@
 {
   "name": "web-view-bridge",
   "private": false,
-  "type": "module",
-  "description": "",
   "scripts": {
     "dev": "vite src",
     "build": "tsc && vite build",
