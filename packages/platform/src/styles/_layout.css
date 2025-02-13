@@ -6,11 +6,32 @@
 }
 
 .layout-header {
-  grid-area: 1 / 2 / 2 / 3;
+  grid-area: 1 / 1 / 2 / 3;
+  padding: 16px 8px;
+}
+
+.layout-header__container {
+  background-color: rgb(16, 67, 134);
+  color: var(--color-white);
+  height: 100%;
+  border-radius: 16px;
+}
+
+.layout-header__title {
+  text-align: center;
+  padding-top: 12px;
 }
 
 .layout-aside {
-  grid-area: 1 / 1 / 3 / 2;
+  grid-area: 2 / 1 / 3 / 2;
+  padding: 0 0 32px 8px;
+}
+
+.layout-aside__container {
+  background-color: rgb(16, 67, 134);
+  color: var(--color-white);
+  height: 100%;
+  border-radius: 16px;
 }
 
 .layout-main {

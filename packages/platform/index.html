@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
+
   <body>
     <div class="layout" id="app">
-      <header class="layout-header"></header>
+      <header class="layout-header">
+        <div class="layout-header__container">
+          <h1 id="title" class="layout-header__title"></h1>
+        </div>
+      </header>
 
-      <aside class="layout-aside"></aside>
+      <aside class="layout-aside">
+        <nav class="layout-aside__container"></nav>
+      </aside>
 
       <main class="layout-main">
         <iframe
