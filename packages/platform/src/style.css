@@ -1,2 +1,4 @@
 @import url('./styles/_variables.css');
 @import url('./styles/_reset.css');
+@import url('./styles/_layout.css');
+@import url('./styles/_loading.css');

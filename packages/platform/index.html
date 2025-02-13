@@ -7,9 +7,22 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app">
-      <iframe src="http://localhost:5173/"></iframe>
+    <div class="layout" id="app">
+      <header class="layout-header"></header>
+
+      <aside class="layout-aside"></aside>
+
+      <main class="layout-main">
+        <iframe
+          class="layout-iframe"
+          src="http://localhost:5173/"
+          title="app-web-view"
+          name="app-web-view"
+        ></iframe>
+      </main>
     </div>
+
+    <div class="loading"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
