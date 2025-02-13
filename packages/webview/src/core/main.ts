@@ -6,7 +6,6 @@ function setup() {
   //@ts-ignore
   window.bridge = { ...bridge }
   bridge.iframeLoaded()
-  bridge.setTitle('web view test')
 }
 
 setup()
