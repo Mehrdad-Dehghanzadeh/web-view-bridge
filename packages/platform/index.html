@@ -19,8 +19,13 @@
       <aside class="layout-aside">
         <nav class="layout-aside__container">
           <ul class="layout-aside__menu">
-            <li class="layout-aside__menu-item">web view 5173</li>
-            <li class="layout-aside__menu-item">vue port 3000</li>
+            <li class="layout-aside__menu-item" onclick="changeWebView('5173')">
+              web view 5173
+            </li>
+
+            <li class="layout-aside__menu-item" onclick="changeWebView('3000')">
+              vue port 3000
+            </li>
           </ul>
         </nav>
       </aside>
@@ -48,6 +53,11 @@
           payload: { firstName: 'Mehrdad', lastName: 'Dehghanzadeh' }
         })
         iframe.contentWindow.postMessage(message, '*')
+      }
+
+      function changeWebView(port) {
+        const src = 'http://localhost:' + port
+        iframe.setAttribute('src', src)
       }
     </script>
   </body>
