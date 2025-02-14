@@ -12,15 +12,22 @@
       <header class="layout-header">
         <div class="layout-header__container">
           <h1 id="title" class="layout-header__title"></h1>
+          <button style="margin-left: 10px" onclick="sendName()">send name</button>
         </div>
       </header>
 
       <aside class="layout-aside">
-        <nav class="layout-aside__container"></nav>
+        <nav class="layout-aside__container">
+          <ul class="layout-aside__menu">
+            <li class="layout-aside__menu-item">web view 5173</li>
+            <li class="layout-aside__menu-item">vue port 3000</li>
+          </ul>
+        </nav>
       </aside>
 
       <main class="layout-main">
         <iframe
+          id="webViewIframe"
           class="layout-iframe"
           src="http://localhost:5173/"
           title="app-web-view"
@@ -31,5 +38,17 @@
 
     <div class="loading"></div>
     <script type="module" src="/src/main.js"></script>
+
+    <script>
+      const iframe = document.getElementById('webViewIframe')
+
+      function sendName() {
+        const message = JSON.stringify({
+          name: 'getName',
+          payload: { firstName: 'Mehrdad', lastName: 'Dehghanzadeh' }
+        })
+        iframe.contentWindow.postMessage(message, '*')
+      }
+    </script>
   </body>
 </html>

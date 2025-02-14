@@ -9,3 +9,14 @@ function setup() {
 }
 
 setup()
+
+bridge.setTitle('web view on port 5173')
+
+addEventListener('getName', (event: any) => {
+  const data = event.detail
+
+  const contentEl = document.getElementById('content')
+  if (contentEl) {
+    contentEl.innerHTML = data.firstName + ' ' + data.lastName
+  }
+})

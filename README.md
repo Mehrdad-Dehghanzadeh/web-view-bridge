@@ -55,11 +55,13 @@ When you build, it gives you the output of a script that should be placed in the
 - Small Size Application
 - Ease to Multi Platform
 - Ease to add new business as feature in application
+- Reduce Packages and Dependencies
 
 ## Requirment Of Super Application
 
 - **Multiple Environments Publish** For All Web View and need to **good Devops**
 - OAuth Server for Autintaction / Authorization in All Web View
+- Use **Deep Link** concept for links in app
 
 ## Challenges Of Super Application
 

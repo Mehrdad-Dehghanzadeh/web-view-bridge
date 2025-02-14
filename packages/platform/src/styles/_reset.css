@@ -12,3 +12,8 @@ iframe {
   border: none;
   outline: none;
 }
+
+ul,
+ol {
+  list-style-type: none;
+}
