@@ -47,6 +47,27 @@ When you build, it gives you the output of a script that should be placed in the
 </html>
 ```
 
+### Send Data To Parent
+
+when you want send data to parent you use method of bridge.
+type of messages consists of two prop `name` and `payload`
+
+```html
+<script>
+  window.bridge[methodName]()
+</script>
+```
+
+### Recive Data and CallBack
+
+when you want get data from parent you must add listener for desired event that is a custom event
+
+```html
+<script>
+  addEventListener('eventName', (event) => {})
+</script>
+```
+
 ## Benefits Of Using Super Application
 
 - Multi stack
